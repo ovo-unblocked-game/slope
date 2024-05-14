@@ -1,27 +1,41 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Slope</title>
-        <link rel="stylesheet" href="TemplateData/style.css">
-        <script src="TemplateData/UnityProgress.js"></script>
-        <script src="TemplateData/unityloader41.js"></script>
-        <script>
-            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
-        </script>
-        
-    </head>
-    <body style="margin: 0; overflow: hidden;">
-        <div class="webgl-content">
-            <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="lib/os-gui/layout.css" rel="stylesheet" type="text/css">
+    <link href="lib/os-gui/windows-98.css" rel="stylesheet" type="text/css">
+    <link href="src/solitaire.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/solitaire-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/solitaire-32x32.png" sizes="32x32" type="image/png">
+    <title>Solitaire</title>
+</head>
+<body>
+    <div class="solitaire inset-deep" id="js-solitaire">
+        <div class="size-limit">
+            <div class="upper" id="js-upper">
+                <div id="js-deck-pile" class="deck__pile upper__spacer"></div>
+                <div id="js-deck-deal" class="deck__deal upper__spacer"></div>
+                <div class="upper__spacer"></div>
+            </div>
+            <div id="js-board" class="board-deck"></div>
         </div>
-        <script async src="//static.getclicky.com/101357250.js"></script>
-        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101357250ns.gif" /></p></noscript>
-        <!--Anchor Ad Start-->
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/os-gui/MenuBar.js"></script>
+    <script src="lib/os-gui/$Window.js"></script>
+    <script src="src/msgbox.js"></script>
+    <script>defaultMessageBoxTitle = "Solitaire";</script>
+    <script src="src/menus.js"></script>
+    <script src="src/index.js"></script>
+
+    <script type="application/javascript" src="/js/main.js"></script>
+    <!--Anchor Ad Start-->
 		<script>
 			var afg={};afg.u=6328;afg.s=31;
 			afg.anchor="bottom";
-			document.write("<sc"+"ript src='//js.adfoames.co/cd.js'></sc"+"ript>");
+			document.write("<sc"+"ript src='//js.aforgaes.cm/cd.js'></sc"+"ript>");
 		</script>
 		<!--Anchor Ad End-->
-    </body>
-</html
+</body>
+</html>
